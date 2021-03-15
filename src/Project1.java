@@ -61,7 +61,7 @@ public class Project1 {
                 Scanner isPlayAgain = new Scanner(System.in);
                 response = isPlayAgain.next();
 
-                if (!response.equals("Yes")) {
+                if (!response.toLowerCase().equals("yes") && !response.toLowerCase().equals("y")) {
                     isContinue = false;
                 }
 
