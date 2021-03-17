@@ -9,12 +9,12 @@ public class StringVertical {
             Scanner keyboard = new Scanner(System.in);
 
             System.out.println("Enter a String:");
-            String userInput = keyboard.nextLine();
-            int stringLength = userInput.length();
-            //positionOfChars = userInput.substring(0, stringLength);
+            String Input = keyboard.nextLine();
+            //int stringLength = Input.length();
+            //positionOfChars = Input.substring(0, stringLength);
 
-            for (int i = 0; i < stringLength; i++) {
-                char letter = userInput.charAt(i);
+            for (int i = 0; i < Input.length(); i++) {
+                char letter = Input.charAt(i);
                 System.out.println(letter);
             }
 
