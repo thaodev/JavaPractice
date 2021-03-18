@@ -22,7 +22,8 @@ public class RecursiveSum {
             Scanner num = new Scanner(System.in);
             System.out.println("What is your number? ");
             int number = num.nextInt();
-            System.out.println(Sum(number));
+            int a = Sum(number);
+            System.out.println(a);
             System.out.println("Do you want to play again? ");
             Scanner response2 = new Scanner(System.in);
             res = response2.next();
