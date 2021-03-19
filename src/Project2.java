@@ -12,6 +12,7 @@ public class Project2 {
     }
     public static void begin() {
         System.out.println("This program reads exam/homework scores and reports your overall course grade.");
+        System.out.println();
     }
 
     private static DecimalFormat df = new DecimalFormat("0.0");
@@ -23,17 +24,14 @@ public class Project2 {
         Scanner midterm = new Scanner(System.in);
         int weightMid = midterm.nextInt();
         System.out.println();
-
         /* input score for midterm */
         System.out.print("Score earned? ");
         int scoreMid = midterm.nextInt();
         System.out.println();
-
         /*Score shifted?*/
         System.out.print("Were scored shifted (1=yes, 2=no)?");
         int scoreShifted = midterm.nextInt();
         System.out.println();
-
         int totalPoints = 0;
         if (scoreShifted == 1) {
             System.out.print("Shift amount? ");
@@ -51,10 +49,11 @@ public class Project2 {
         System.out.println("Total points = " + totalPoints + " / 100");
         /*Final weighted score cal*/
         weightScoreMid = ((double)totalPoints/100)*weightMid;
-
         System.out.println("Weighted score = " + df.format(weightScoreMid)+ " / " + weightMid);
+        System.out.println();
         return weightScoreMid;
     }
+
     public static double finalF() {
         System.out.println("Final:");
         /* input weight for midterm*/
@@ -92,6 +91,7 @@ public class Project2 {
         /*Final weighted score cal*/
         weightScoreF = ((double)totalPointsF/100)*weightFinal;
         System.out.println("Weighted score = " + df.format(weightScoreF) + " / " + weightFinal);
+        System.out.println();
         return weightScoreF;
     }
     public static double homework() {
@@ -136,7 +136,7 @@ public class Project2 {
         System.out.println("Overall percentage = " + df.format(total));
         System.out.println("Your grade will be at least: 3.0");
         if (total > 84.99) {
-            System.out.println("You passed. Congrats");
+            System.out.println("You passed. Congrats on your GPA at 3.0");
         }
         else if (total < 74.99 && total > 60) {
             System.out.println("You didn't pass and your GPA is at 2.0");
